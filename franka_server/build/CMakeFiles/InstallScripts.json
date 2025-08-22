@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/zkweng/lerobot/franka_server/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,14 @@
+python -m lerobot.record \
+    --robot.type=xhand \
+    --robot.protocol=RS485 \
+    --robot.serial_port=/dev/ttyUSB0 \
+    --robot.baud_rate=3000000 \
+    --teleop.type=xhand_vr \
+    --teleop.control_frequency=30.0 \
+    --teleop.smoothing_alpha=0.3 \
+    --dataset.fps=30 \
+    --dataset.episode_time_s=10 \
+    --dataset.num_episodes=1 \
+    --dataset.root=./datasets/xhand_test \
+    --dataset.repo_id=your_username/xhand_vr_demos \
+    --dataset.single_task="XHand VR teleoperation demonstrations"

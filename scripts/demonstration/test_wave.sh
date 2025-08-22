@@ -1,0 +1,15 @@
+  python -m lerobot.record \
+    --robot.type=franka_fer \
+    --robot.server_ip=192.168.18.1 \
+    --robot.server_port=5000 \
+    --teleop.type=vr \
+    --teleop.tcp_port=8000 \
+    --teleop.verbose=false \
+    --dataset.fps=30 \
+    --dataset.episode_time_s=10 \
+    --dataset.num_episodes=40 \
+    --dataset.root=./datasets/franka_wave \
+    --dataset.repo_id=local_dataset_franka_wave \
+    --dataset.single_task="Test VR teleoperation data collection" \
+    --dataset.push_to_hub=false \
+    --resume=true

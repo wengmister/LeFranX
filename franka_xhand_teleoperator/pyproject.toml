@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "pybind11>=2.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "franka_xhand_teleoperator"
+version = "0.1.0"
+description = "Franka XHand Teleoperator with VR support for LeRobot"
+authors = [{name = "Zhengyang Kris Weng"}]
+requires-python = ">=3.7"
+dependencies = [
+    "pybind11>=2.6.0",
+    "numpy",
+]
+
+[tool.setuptools]
+packages = []
