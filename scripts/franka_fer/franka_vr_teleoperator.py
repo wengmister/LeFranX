@@ -18,8 +18,6 @@ from lerobot.teleoperators.franka_fer_vr.config_franka_fer_vr import FrankaFERVR
 def test_vr_arm_control():
     print("Testing VR control of Franka arm using FrankaFERVRTeleoperator...")
     
-    # ADB setup is now handled automatically by the teleoperator
-    
     try:
         # Initialize Franka robot with proper config
         print("Connecting to Franka robot...")
