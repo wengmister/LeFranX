@@ -1,3 +1,0 @@
-/home/zkweng/lerobot/franka_server/build/CMakeFiles/velocity_server.dir
-/home/zkweng/lerobot/franka_server/build/CMakeFiles/edit_cache.dir
-/home/zkweng/lerobot/franka_server/build/CMakeFiles/rebuild_cache.dir

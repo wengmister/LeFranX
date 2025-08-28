@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(franka_velocity_server)
+project(franka_server)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -11,7 +11,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 
 # Set CMAKE_PREFIX_PATH to find your libfranka installation
 # You can override this by passing -DFRANKA_INSTALL_PATH=/path/to/franka/install
-set(FRANKA_INSTALL_PATH "$ENV{HOME}/ws/franka/install" CACHE PATH "Path to Franka installation directory")
+set(FRANKA_INSTALL_PATH "$ENV{HOME}/ws/franka/install" CACHE PATH "Path to libfranka installation directory")
 set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};${FRANKA_INSTALL_PATH}")
 
 # Find required packages
@@ -20,14 +20,14 @@ find_package(Threads REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(ruckig REQUIRED)
 
-# Velocity Server executable
-add_executable(velocity_server 
-    src/velocity_server.cpp
+# Franka Server executable
+add_executable(franka_server 
+    src/franka_server.cpp
     src/examples_common.cpp
 )
 
 # Link libraries
-target_link_libraries(velocity_server
+target_link_libraries(franka_server
     Franka::Franka
     Threads::Threads
     ruckig::ruckig
@@ -35,12 +35,12 @@ target_link_libraries(velocity_server
 )
 
 # Include directories
-target_include_directories(velocity_server PRIVATE 
+target_include_directories(franka_server PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${EIGEN3_INCLUDE_DIR}
 )
 
 # Optional: Set runtime path for shared libraries
-set_target_properties(velocity_server PROPERTIES
+set_target_properties(franka_server PROPERTIES
     INSTALL_RPATH_USE_LINK_PATH TRUE
 )
