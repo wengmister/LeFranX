@@ -75,7 +75,7 @@ setup(
     name="franka_xhand_teleoperator",
     version="0.1.0",
     description="Franka XHand Teleoperator with VR support for LeRobot",
-    author="LeRobot Team",
+    author="Zhengyang Kris Weng",
     ext_modules=ext_modules,
     cmdclass={"build_ext": build_ext},
     zip_safe=False,

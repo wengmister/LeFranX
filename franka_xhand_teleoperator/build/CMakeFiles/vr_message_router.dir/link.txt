@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -flto -shared  -o vr_message_router.cpython-312-x86_64-linux-gnu.so CMakeFiles/vr_message_router.dir/src/vr_message_router.cpp.o 

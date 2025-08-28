@@ -1,4 +1,0 @@
-/home/zkweng/lerobot/franka_xhand_teleoperator/build/CMakeFiles/vr_message_router.dir
-/home/zkweng/lerobot/franka_xhand_teleoperator/build/CMakeFiles/weighted_ik_bridge.dir
-/home/zkweng/lerobot/franka_xhand_teleoperator/build/CMakeFiles/edit_cache.dir
-/home/zkweng/lerobot/franka_xhand_teleoperator/build/CMakeFiles/rebuild_cache.dir

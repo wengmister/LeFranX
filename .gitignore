@@ -1,0 +1,13 @@
+# build artifacts
+**/build
+
+# Python
+**/__pycache__
+
+# venv
+**/venv
+.venv
+
+# Pybind11
+*.egg-info
+*.so
