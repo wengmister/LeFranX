@@ -1,0 +1,3 @@
+[submodule "vr-dex-retargeting"]
+	path = vr-dex-retargeting
+	url = https://github.com/wengmister/vr-dex-retargeting
