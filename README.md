@@ -1,6 +1,6 @@
-# LeFranka
+# LeFranX
 
-LeRobot Integration for Franka FER Robot. Check out `XHand` branch for Franka FER + XHand combo robot deployment.
+LeRobot Extension for Franka FER Robot & XHand Robot.
 
 [![Watch the video](https://img.youtube.com/vi/TzlUEWCjQ1M/0.jpg)](https://www.youtube.com/watch?v=TzlUEWCjQ1M)
 
@@ -13,7 +13,7 @@ There are three main parts to this LeRobot Franka robot extension, `franka_serve
 
 ## Build
 
-Project was tested on [`LeRobot`](https://github.com/huggingface/lerobot) commit [`ce3b9f627e55223d6d1c449d348c6b351b35d082`](https://github.com/huggingface/lerobot/commit/ce3b9f627e55223d6d1c449d348c6b351b35d082). To use this extension, copy and paste all content inside the repo over to your `LeRobot` directory and do the following:
+Project was tested on [`LeRobot`](https://github.com/huggingface/lerobot) commit [`ce3b9f627e55223d6d1c449d348c6b351b35d082`](https://github.com/huggingface/lerobot/commit/ce3b9f627e55223d6d1c449d348c6b351b35d082), with Ubuntu `24.04` and Python `3.12`. To use this extension, copy and paste all content inside the repo over to your `LeRobot` directory and do the following:
 
 1. Franka server - needs to be built and deployed on your real-time machine that controls the robot.
 ```bash
