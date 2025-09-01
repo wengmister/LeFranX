@@ -37,6 +37,8 @@ cd franka_xhand_teleoperator
 [uv] pip install -e .
 ```
 
+Additionally, you will also need to set up Meta Quest VR App from [this repo](https://github.com/wengmister/franka-vr-teleop)
+
 <details>
 <summary>XHand Dependencies</summary>
 
