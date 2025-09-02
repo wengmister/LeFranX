@@ -15,13 +15,26 @@ There are three main parts to this LeRobot Franka robot extension, `franka_serve
 
 Project was tested on [`LeRobot`](https://github.com/huggingface/lerobot) commit [`ce3b9f627e55223d6d1c449d348c6b351b35d082`](https://github.com/huggingface/lerobot/commit/ce3b9f627e55223d6d1c449d348c6b351b35d082), with Ubuntu `24.04` and Python `3.12`. To use this extension, copy and paste all content inside the repo over to your `LeRobot` directory and do the following:
 
-1. Franka server - needs to be built and deployed on your real-time machine that controls the robot.
+### 1. Franka server
+This needs to be built and deployed on your real-time machine that controls the robot.
+
 ```bash
 cd franka_server
 bash build.sh
 ```
 
-Find the built `franka_server` and copy over to your robot RTPC (or run in a second terminal if it's the same PC) 
+Build `franka_server` and run on your robot RTPC (or run in a second terminal if it's the same PC) 
+
+<details> 
+<summary><strong>franka_server Dependencies</strong></summary>
+
+- [ruckig](https://github.com/pantor/ruckig)
+
+- [libfranka](https://github.com/frankarobotics/libfranka) (must match your robot firmware version)
+
+- [pinocchio](https://github.com/stack-of-tasks/pinocchio) (required if `libfranka` > 0.14.0)
+
+</details>
 
 >[!NOTE]
 > You will need to run the following commands on RTPC to start up the server before using any LeRobot utilities to move the arm.
@@ -30,7 +43,9 @@ Find the built `franka_server` and copy over to your robot RTPC (or run in a sec
 ./franka_server [YOUR_FRANKA_ROBOT_IP]
 ```
 
-2. Franka teleoperator - needs to be built and added to your environment
+### 2. Franka teleoperator
+
+This needs to be built and added to your environment
    
 ```bash
 cd franka_xhand_teleoperator
@@ -40,7 +55,7 @@ cd franka_xhand_teleoperator
 Additionally, you will also need to set up Meta Quest VR App from [this repo](https://github.com/wengmister/franka-vr-teleop)
 
 <details>
-<summary>XHand Dependencies</summary>
+<summary><strong>XHand Dependencies</strong></summary>
 
 For `XHand`, we will use a repository adapted based on Yuzhe Qin's amazing work on [`dex-retargeting`](https://github.com/dexsuite/dex-retargeting) to map human hand motion to the robot hand.
 
@@ -55,17 +70,18 @@ cd vr-dex-retargeting
 [uv] pip install -e .
 ```
 
-   
 </details>
 
-3. LeRobot classes - copy to merge with files under LeRobot's `src` directory. This includes new Robot and Teleoperator class implementations needed to work with the rest of the framework.
+### 3. LeRobot classes
+
+Copy to merge with files under LeRobot's `src` directory. This includes new Robot and Teleoperator class implementations needed to work with the rest of the framework.
 
 >[!NOTE]
 > Due to time constraints and the nature of the project, I didn't develop an interface for the Franka Hand gripper since I didn't use it, but contributions are welcome!
 
 ## Usage
 
-Call any LeRobot utility as you would with the new Robots! Examples can be found under `scripts`.
+Call any LeRobot utility as you would with the new Robots! Examples can be found under [`scripts`](https://github.com/wengmister/LeFranX/tree/main/scripts).
 
 >[!CAUTION] 
 >If you're comboing robots together like I did with Franka + XHand, it might be a good idea to call utility methods directly in your own python script as opposed to using the existing python implementations with arguments (for training and rollout, etc.). Combo robot setup will cause circular import calls with `Draccus`; I'm currently bypassing this issue by constructing train and deployment scripts directly. Please let me know if you would have a better method to deal with this.
@@ -75,7 +91,7 @@ Call any LeRobot utility as you would with the new Robots! Examples can be found
 
 https://github.com/user-attachments/assets/5e6e1930-6bca-4d1a-b175-423de4388dc1
 
-### Pick up toast, place in toaster, and press toast lever:
+### Pick up toast, insert in toaster, and press toast lever:
 
 https://github.com/user-attachments/assets/03dbfd55-91e3-40f0-9e5c-fca9b33fad30
 
