@@ -102,5 +102,15 @@ https://github.com/user-attachments/assets/e5b54e07-031d-42e2-994b-030e646e2768
 ## Datasets
 Open-source datasets for the demo tasks could be found on HuggingFace [here](https://huggingface.co/wengmister).
 
+## Citation
+If you find this work helpful, please consider citing as:
+
+    @misc{weng2025lefranx,
+        title = {LeFranX: LeRobot Extension for Franka FER Robot and XHand Robot},
+        author = {Weng, Zhengyang Kris},
+        year = {2025},
+        url = {https://github.com/wengmister/LeFranX},
+    }
+
 ## License
 Apache-2.0
