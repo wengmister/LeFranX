@@ -1,4 +1,4 @@
 lerobot-replay \
     --robot.type=xhand \
-    --dataset.repo_id=/home/zkweng/lerobot/datasets/xhand_test \
+    --dataset.repo_id=[YOUR_DATASET_REPO_PATH] \
     --dataset.episode=0

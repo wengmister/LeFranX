@@ -5,3 +5,5 @@ Example scripts under these directories:
 - Record
 - Train
 - Deploy
+
+Please refer to scripts for more details.
