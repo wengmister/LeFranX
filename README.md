@@ -1,6 +1,8 @@
 # LeFranX
+[🤗HF Dataset](https://huggingface.co/collections/wengmister/lefranx-dataset-68b4684269dbb97fd3061be0)  
+[arXiv](https://arxiv.org/abs/2509.14349)  
 
-LeRobot Extension for Franka FER Robot & XHand Robot.
+LeRobot Extension for Franka FER Robot & XHand Robot. An instantiation of the [LeVR](https://arxiv.org/abs/2509.14349) framework.
 
 [![Watch the video](https://img.youtube.com/vi/TzlUEWCjQ1M/0.jpg)](https://www.youtube.com/watch?v=TzlUEWCjQ1M)
 
@@ -105,12 +107,15 @@ Open-source datasets for the demo tasks could be found on HuggingFace [here](htt
 ## Citation
 If you find this work helpful, please consider citing as:
 
-    @misc{weng2025lefranx,
-        title = {LeFranX: LeRobot Extension for Franka FER Robot and XHand Robot},
-        author = {Weng, Zhengyang Kris},
-        year = {2025},
-        url = {https://github.com/wengmister/LeFranX},
-    }
+      @misc{weng2025levr,
+            title={LeVR: A Modular VR Teleoperation Framework for Imitation Learning in Dexterous Manipulation}, 
+            author={Zhengyang Kris Weng and Matthew L. Elwin and Han Liu},
+            year={2025},
+            eprint={2509.14349},
+            archivePrefix={arXiv},
+            primaryClass={cs.RO},
+            url={https://arxiv.org/abs/2509.14349}, 
+      }
 
 ## License
 Apache-2.0
